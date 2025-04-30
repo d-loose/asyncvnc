@@ -9,6 +9,7 @@ from typing import Callable, Dict, List, Optional, Set, Tuple
 from zlib import decompressobj
 
 import numpy as np
+import time
 
 from cryptography.hazmat.primitives.asymmetric import padding, rsa
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
@@ -133,7 +134,7 @@ class Keyboard:
 
         for key in text:
             with self.hold(key):
-                pass
+                time.sleep(0.1)
 
 
 @dataclass
